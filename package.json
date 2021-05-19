@@ -9,6 +9,7 @@
   "author": "Carlos Adao\u001b[D\u001b[D\u001b[D\u001b[_",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
