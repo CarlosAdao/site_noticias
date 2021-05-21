@@ -1,24 +1,11 @@
-var express = require('express');
-var app = express();
+app = require('./config/server');
 
-//Adicionando o novo engine de view EJS
-app.set('view engine', 'ejs');
+var rotaHome = require('./app/routes/home')(app);
 
+var rotaFormularioInclusao = require('./app/routes/noticias')(app);
 
-//Trata as requisições com express
-app.get('/', function(req, res){
-    html = "<html><body>Home</body></html>"
-    res.send(html)
-})
-
-//Trata as requisições com express
-app.get('/noticias', function(req, res){
-    html = "<html><body>Painel de noticias</body></html>"
-    res.send(html)
-})
-
-
+var rotaNoticias = require('./app/routes/noticias')(app);
 
 app.listen(3000, function(){
-    console.log("Servidor on");
+    console.log("Servidor ON");
 })
